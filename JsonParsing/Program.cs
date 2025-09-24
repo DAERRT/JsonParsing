@@ -15,12 +15,12 @@
 
             double[,] coefficients_task2 = new double[,]
     {
-                    { 0, -1.04067, 1.20833},
-                    { -0.22857, 0, 0.4},
-                    { -0.17442, 0.26744, 0},
+                    { 0.45, 0.08, -0.42},
+                    { -0.08, 0.65, 0.14},
+                    { -0.15, 0.23, 0.14},
     };
-            double[] free_coefficients_task2 = { 1.875, 0.91429, -0.63953 };
-            double[] free_coefficients_task2_1 = { 1.875, 0.91429, -0.63953 };
+            double[] free_coefficients_task2 = { -0.03, -0.32, 0.55 };
+            double[] free_coefficients_task2_1 = { -0.03, -0.32, 0.55 };
             Console.WriteLine("----------------Задание 1-----------------");
             Console.WriteLine("Метод Якоби");
             Console.WriteLine(Sxodimost(coefficients_task1));
@@ -64,7 +64,7 @@
                 double a = 0;
                 for (int j = 0; j < coefficients.GetLength(1); j++)
                 {
-                    a += coefficients[i, j];
+                    a += Math.Abs(coefficients[i, j]);
                 }
                 if (a > sxodimost)
                 {
